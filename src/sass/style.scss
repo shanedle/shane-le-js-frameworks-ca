@@ -1,0 +1,18 @@
+@import "partials/_variables";
+
+body {
+	background-color: $backgroundColour;
+
+}
+.container {
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+}
+
+.error {
+	color: red;
+}
+
+.search {
+	margin-bottom: 1rem;
+}
