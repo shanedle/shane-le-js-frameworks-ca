@@ -1,22 +1,35 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
-import ResponsiveEmbed from 'react-bootstrap/ResponsiveEmbed'
+import React from "react";
+import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
+import { Button, Col, Card, ResponsiveEmbed, Row } from "react-bootstrap";
+import { IconContext } from "react-icons";
+import { FaStar } from "react-icons/fa";
 
-function GameItem({ id, name, image, rating, released }) {
+
+const GameItem = ({ id, name, image, rating, released }) => {
     return (
-        <Card>
+        <Card className="cardd my-3">
             <ResponsiveEmbed aspectRatio="16by9">
                 <Card.Img variant="top" src={image} />
             </ResponsiveEmbed>
             <Card.Body>
-                <Card.Title>{name}</Card.Title>
-                <Card.Text><span role="img" aria-label="star">⭐</span>{rating}</Card.Text>
-                <Card.Text>{released}</Card.Text>
+                <Card.Text className="cardd__title">{name}</Card.Text>
+                <Row>
+                    <Col>
+
+                        <IconContext.Provider value={{ color: "orange", size: "1.5em", className: "card__rating" }}>
+                            <div>
+                                <Card.Text className="cardd__text"><FaStar className="mb-1 mr-2" />{rating}</Card.Text>
+                            </div>
+                        </IconContext.Provider>
+
+                    </Col>
+                    <Col>
+                        <Card.Text className="cardd__text">{released}</Card.Text>
+                    </Col>
+                </Row>
                 <Link to={"game/" + id}>
-                    <Button variant="dark" block>Learn More</Button>
+                    <Button className="cardd__button" block>Learn More</Button>
                 </Link>
             </Card.Body>
         </Card>

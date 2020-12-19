@@ -1,0 +1,12 @@
+.navigationbar {
+    background-color: $deep-cyan;
+
+    &__brand {
+        color: $white !important;
+    }
+
+    &__toggle {
+        border:none;
+    }
+
+}

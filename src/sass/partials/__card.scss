@@ -1,0 +1,44 @@
+.cardd {
+    &__title { 
+        font-size: 1rem;
+        font-weight: bold;
+        text-align: center;    
+    }
+    &__text { 
+        color: $deep-cyan;
+    }
+    &__button {
+        background: $dark-cyan !important;
+        border: 1px solid $deep-cyan !important;
+        text-transform: uppercase;
+
+        &:active:focus    {
+            background: $dark-cyan-hover !important;
+            color: $white !important;
+            border: 1px solid $deep-cyan !important;
+        }
+        &:hover,
+        &:focus,
+        &.focus {
+            background: $dark-cyan-hover !important;
+            color: $white !important;
+            border: 1px solid $deep-cyan !important;
+        }
+      
+        &:active,
+        &.active,
+        &.disabled,
+        &:disabled {
+            background: $dark-cyan-hover !important;
+            color: $white !important;
+            border: 1px solid $deep-cyan !important;
+      
+          &:focus,
+          &.focus {
+            background: $dark-cyan-hover !important;
+            color: $white !important;
+            border: 1px solid $deep-cyan !important;
+          }
+        }
+    }
+}

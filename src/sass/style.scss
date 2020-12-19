@@ -1,18 +1,11 @@
+@import "~bootstrap/scss/bootstrap";
+
 @import "partials/_variables";
+@import "partials/_layout";
+@import "partials/_navbar";
+@import "partials/_spinner";
+@import "partials/_card";
+@import "partials/_error";
+@import "partials/_detail";
+@import "partials/_contact";
 
-body {
-	background-color: $backgroundColour;
-
-}
-.container {
-	padding-top: 2rem;
-	padding-bottom: 2rem;
-}
-
-.error {
-	color: red;
-}
-
-.search {
-	margin-bottom: 1rem;
-}
